@@ -1,4 +1,3 @@
-// lib/i18n.ts
 export type Lang = 'pt' | 'en'
 
 type Texts = {
@@ -44,9 +43,11 @@ type Texts = {
     subtitle: string
     items: {
         sisger: { sector?: string; desc: string }
+        autorize: { sector?: string; desc: string}
+        consultorio: { sector?: string; desc: string}
         moodle: { sector?: string; desc: string }
         portfolio: { sector?: string; desc: string }
-        ehora: { sector?: string; desc: string }
+        landing: { sector?: string; desc: string }
     }
   }
   about: {
@@ -68,7 +69,6 @@ type Texts = {
     subtitle1: string
     subtitle2: string
     whatsappCta: string
-    emailCta: string
     cardTitle: string
     whatsappLabel: string
     emailLabel: string
@@ -84,7 +84,7 @@ type Texts = {
 export const TEXTS: Record<Lang, Texts> = {
   pt: {
     navbar: {
-      role: 'Desenvolvedor Full Stack',
+      role: 'Engenheiro de Software',
       name: 'Emerson Xavier',
       items: {
         services: 'Serviços',
@@ -146,6 +146,14 @@ export const TEXTS: Record<Lang, Texts> = {
         sector: 'Setor público · Saúde',
         desc: 'Sistema de agendamento desenvolvido para a Diretoria Geral de Telessaúde da Secretaria Estadual de Saúde de Pernambuco, focado em organizar reuniões e melhorar a experiência dos usuários no serviço de telegestão.',
         },
+        autorize: {
+          sector: 'Saúde · Sistema de Atendimento',
+          desc: 'Sistema de gestão completo para clínicas e serviços de saúde, incluindo módulos de pacientes, solicitações, autorizações, convênios, protocolos, relatórios e muito mais.',
+        },
+        consultorio: {
+          sector: 'Saúde · Sistema médico',
+          desc: 'Sistema voltado para consultórios médicos, permitindo gerenciar atendimentos, pacientes, prescrições, anotações e organização geral do fluxo clínico.',
+        },
         moodle: {
         sector: 'Educação · Saúde',
         desc: 'Estruturação e implementação de um Ambiente Virtual de Aprendizagem para capacitação de profissionais de saúde, incluindo configuração, personalização de temas e suporte contínuo.',
@@ -154,9 +162,9 @@ export const TEXTS: Record<Lang, Texts> = {
         sector: 'Projeto pessoal',
         desc: 'Portfólio profissional desenvolvido com foco em desempenho, responsividade e clareza na apresentação de experiências, tecnologias e projetos.',
         },
-        ehora: {
-        sector: 'Saúde · Sistema de agendamento',
-        desc: 'Aplicação para agendamento de atendimentos em posto de saúde, projetada para tornar o fluxo de marcação de consultas mais simples, organizado e eficiente para pacientes e equipe.',
+        landing: {
+          sector: 'Tecnologia · Presença digital',
+          desc: 'Desenvolvimento de landing pages e páginas de captura otimizadas para conversão, com foco em destacar serviços, produtos e propostas de valor de forma clara e objetiva.',
         },
     },
     },
@@ -164,7 +172,7 @@ export const TEXTS: Record<Lang, Texts> = {
       title: 'Sobre mim',
       badgeLine: 'Como eu costumo trabalhar',
       p1: 'Sou desenvolvedor Full Stack graduado em Ciência da Computação, com mais de 4 anos de experiência construindo sistemas e sites que realmente vão para produção.',
-      p2: 'Ao longo da minha trajetória atuei principalmente com PHP (Laravel, CodeIgniter), JavaScript (React, Next.js, Node.js) e bancos de dados relacionais como MySQL, sempre focado em entregar soluções estáveis, seguras e fáceis de manter.',
+      p2: 'Ao longo da minha trajetória atuei principalmente com PHP (Laravel, CodeIgniter), JavaScript (React, Next.js, Node.js), Java (Spring Boot), bancos de dados relacionais como MySQL e SQL Server, e não relacionais como MongoDB, sempre focado em entregar soluções estáveis, seguras e fáceis de manter.',
       p3: 'Já trabalhei em projetos para áreas como saúde, educação e setor público, participando desde o levantamento de requisitos e modelagem de dados até o desenvolvimento e a implantação em produção.',
       workTitle: 'Como eu costumo trabalhar',
       workIntro:
@@ -187,7 +195,6 @@ export const TEXTS: Record<Lang, Texts> = {
       subtitle2:
         'Me conta um pouco sobre o que você tem em mente (tipo de projeto, prazo desejado, se já existe algo em produção, etc.) e eu retorno com sugestões e próximos passos.',
       whatsappCta: 'Falar comigo no WhatsApp',
-      emailCta: 'Enviar e-mail',
       cardTitle: 'Formas de contato',
       whatsappLabel: 'WhatsApp',
       emailLabel: 'E-mail',
@@ -195,7 +202,7 @@ export const TEXTS: Record<Lang, Texts> = {
         'Costumo responder em poucas horas em dias úteis. Caso prefira, você também pode enviar uma mensagem mais detalhada por e-mail com as informações do projeto.',
     },
     footer: {
-      roleLine: 'Desenvolvedor Full Stack',
+      roleLine: 'Engenheiro de Software',
       linkedin: 'LinkedIn',
       github: 'GitHub',
     },
@@ -203,7 +210,7 @@ export const TEXTS: Record<Lang, Texts> = {
 
   en: {
     navbar: {
-      role: 'Full Stack Developer',
+      role: 'Software Engineer',
       name: 'Emerson Xavier',
       items: {
         services: 'Services',
@@ -265,6 +272,14 @@ export const TEXTS: Record<Lang, Texts> = {
             sector: 'Public sector · Healthcare',
             desc: 'Scheduling system developed for the Telehealth General Directorate of the Pernambuco State Health Secretariat, focused on organizing meetings and improving the user experience in telemanagement services.',
             },
+            autorize: {
+              sector: 'Healthcare · Service Management System',
+              desc: 'Complete management platform for healthcare services, including patient modules, requests, authorizations, insurance, protocols, and detailed reports.',
+            },
+            consultorio: {
+              sector: 'Healthcare · Medical office system',
+              desc: 'System for medical practices, enabling management of appointments, patients, prescriptions, notes and workflow organization.',
+            },
             moodle: {
             sector: 'Education · Healthcare',
             desc: 'Implementation and customization of a Virtual Learning Environment for training healthcare professionals, including configuration, theme customization and ongoing support.',
@@ -273,9 +288,9 @@ export const TEXTS: Record<Lang, Texts> = {
             sector: 'Personal project',
             desc: 'Professional portfolio built with focus on performance, responsiveness and clarity when presenting experience, technologies and projects.',
             },
-            ehora: {
-            sector: 'Healthcare · Scheduling system',
-            desc: 'Application for scheduling appointments in public health units, designed to make the appointment flow simpler, more organized and efficient for patients and staff.',
+            landing: {
+              sector: 'Technology · Digital presence',
+              desc: 'Development of high-conversion landing pages and lead capture pages, focused on clearly presenting services, products and value propositions.',
             },
         },
     },
@@ -283,7 +298,7 @@ export const TEXTS: Record<Lang, Texts> = {
       title: 'About me',
       badgeLine: 'How I usually work',
       p1: 'I am a Full Stack developer with a degree in Computer Science and over 4 years of experience building systems and websites that actually go to production.',
-      p2: 'I have worked mainly with PHP (Laravel, CodeIgniter), JavaScript (React, Next.js, Node.js) and relational databases such as MySQL, always focusing on stable, secure and maintainable solutions.',
+      p2: 'I have worked mainly with PHP (Laravel, CodeIgniter), JavaScript (React, Next.js, Node.js), Java (Spring Boot), relational databases such as MySQL and SQL Server, and non-relational databases such as MongoDB, always focusing on delivering stable, secure and maintainable solutions.',
       p3: 'I have been involved in projects in healthcare, education and the public sector, from requirements gathering and data modeling to development and deployment.',
       workTitle: 'How I usually work',
       workIntro:
@@ -306,7 +321,6 @@ export const TEXTS: Record<Lang, Texts> = {
       subtitle2:
         'Tell me a bit about what you have in mind (type of project, desired timeline, if there is something already running, etc.) and I will come back with suggestions and next steps.',
       whatsappCta: 'Talk to me on WhatsApp',
-      emailCta: 'Send an email',
       cardTitle: 'Contact details',
       whatsappLabel: 'WhatsApp',
       emailLabel: 'Email',
@@ -314,7 +328,7 @@ export const TEXTS: Record<Lang, Texts> = {
         'I usually reply within a few hours on business days. If you prefer, you can also send a more detailed email with the project information.',
     },
     footer: {
-      roleLine: 'Full Stack Developer',
+      roleLine: 'Software Engineer',
       linkedin: 'LinkedIn',
       github: 'GitHub',
     },

@@ -53,7 +53,6 @@ export default function Contact() {
               href={`mailto:${EMAIL}`}
               className="inline-flex items-center text-sm md:text-base font-medium text-slate-800 hover:text-cyan-500 dark:text-slate-200 dark:hover:text-cyan-400"
             >
-              {texts.contact.emailCta}
             </a>
           </div>
         </motion.div>
